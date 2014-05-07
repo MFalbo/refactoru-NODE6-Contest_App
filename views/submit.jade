@@ -1,13 +1,21 @@
 extends layout
 
 block content
-	form(method="post" action="/formsubmit")
-		label Name
-		input(type="text" name="name")
-		label YouTube URL
-		input(type="text" name="url")
-		label Video Title
-		input(type="text" name="title")
-		label Video Description
-		textarea(type="text" name="description")
-		input(type="submit")
+	.container
+		if submissions.length >= 8
+			h1 We're sorry, but the maximum number of videos has been reached for this submission cycle.
+		else
+			form(method="post" action="/formsubmit" role="form")
+				.form-group
+				label(for="") Name
+				input#name.form-control(type="text" name="name")
+				.form-group
+				label(for="") YouTube URL
+				input#url.form-control(type="text" name="url")
+				.form-group
+				label(for="") Video Title
+				input#title.form-control(type="text" name="title")
+				.form-group
+				label(for="") Video Description
+				textarea#description.form-control(type="text" name="description")
+				input(type="submit")

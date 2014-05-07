@@ -1,27 +1,30 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require('body-parser');
+app.use(bodyParser());
+
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
+
+
+var submissions = [];
 
 app.get('/', function(req, res) {
 	res.render('home');
 });
 
 app.get('/submit', function(req, res) {
-	res.render('submit');
+	res.render('submit', {submissions: submissions});
 });
 
 app.post('/formsubmit', function(req, res){
-	res.redirect('/success');
-});
-
-app.get('/success', function(req, res) {
-	res.send('<h1>Congratulations Your Video Has Been Submitted!!!</h1><a href="/">Return Home</a>');
+	submissions.push(req.body);
+	res.redirect('/submissions');
 });
 
 app.get('/submissions', function(req, res) {
-	res.render('submissions');
+	res.render('submissions', {submissions:submissions});
 });
 
 app.get('/winners', function(req, res) {

@@ -1,4 +1,9 @@
 extends layout
 
 block content
-	h1 Submit Videos Here
+	h1 Submitted Videos
+
+	for video in submissions
+		ul.list-unstyled
+			li 
+				iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
