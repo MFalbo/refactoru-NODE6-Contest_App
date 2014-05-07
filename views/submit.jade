@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	form(method="post" action="/formsubmit")
+		label Name
+		input(type="text" name="name")
+		label YouTube URL
+		input(type="text" name="url")
+		label Video Title
+		input(type="text" name="title")
+		label Video Description
+		textarea(type="text" name="description")
+		input(type="submit")
