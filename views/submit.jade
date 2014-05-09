@@ -2,7 +2,7 @@ extends layout
 
 block content
 	.container
-		if submissions.length >= 8
+		if submissions1.length >= 4 && submissions12.length >= 4
 			h1 We're sorry, but the maximum number of videos has been reached for this submission cycle.
 		else
 			form(method="post" action="/formsubmit" role="form")

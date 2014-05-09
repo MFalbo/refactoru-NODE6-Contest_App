@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/submit', function(req, res) {
-	res.render('submit');
+	res.render('submit', {submissions1: submissions1, submissions2: submissions2});
 });
 
 app.post('/formsubmit', function(req, res){

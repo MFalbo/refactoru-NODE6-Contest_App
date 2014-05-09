@@ -4,52 +4,52 @@ block content
 	h1 Submitted Videos
 
 	div.ferris-wheel
-		.cart
-			for video in submissions1
-				.vid
-					iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
-					button.voteBtn vote
-		.cart
-			for video in submissions2
-				.vid
-					iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
-					button.voteBtn vote
+			//- .cart
+			//- 	for video in submissions1
+			//- 		.vid
+			//- 			iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+			//- 			button.voteBtn vote
+			//- .cart
+			//- 	for video in submissions2
+			//- 		.vid
+			//- 			iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+			//- 			button.voteBtn vote
 
-		//- if submissions.length === 8
-		//- 	div.cart.cart1.visible
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[0].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[1].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		button.next Next
-		//- 	div.cart.cart2
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[2].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[3].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		button.next Next
-		//- 	div.cart.cart3
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[4].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[5].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		button.next Next
-		//- 	div.cart.cart4
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[6].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		div.vid
-		//- 			iframe(width="560" height="315" src=submissions[7].url frameborder="0" allowfullscreen)
-		//- 			button.voteBtn vote
-		//- 		button.next Next
-		//- else
-		//- 	h1 We still need more submissions before voting can begin
+		if submissions1.length === 4 && submissions2.length === 4
+			div.cart.cart1.visible
+				div.vid
+					iframe(width="560" height="315" src=submissions1[0].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				div.vid
+					iframe(width="560" height="315" src=submissions1[1].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				button.next Next
+			div.cart.cart2
+				div.vid
+					iframe(width="560" height="315" src=submissions1[2].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				div.vid
+					iframe(width="560" height="315" src=submissions1[3].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				button.next Next
+			div.cart.cart3
+				div.vid
+					iframe(width="560" height="315" src=submissions2[0].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				div.vid
+					iframe(width="560" height="315" src=submissions2[1].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				button.next Next
+			div.cart.cart4
+				div.vid
+					iframe(width="560" height="315" src=submissions2[2].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				div.vid
+					iframe(width="560" height="315" src=submissions2[3].url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+				button.next Next
+		else
+			h1 We still need more submissions before voting can begin
 	//- ul.list-unstyled.left-list
 	//- 	for video in submissions
 	//- 		if submissions.length <= 4
