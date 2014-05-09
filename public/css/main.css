@@ -1,0 +1,22 @@
+.vid{
+	display: inline-block;
+}
+.voteBtn{
+	display: block;
+}
+.cart{
+	display: none;
+}
+.visible{
+	display: block;
+}
+.next{
+	display: block;
+}
+
+.winner{
+	margin: 0 auto;
+}
+.loser{
+	display: none;
+}

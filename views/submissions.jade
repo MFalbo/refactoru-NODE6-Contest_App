@@ -3,7 +3,69 @@ extends layout
 block content
 	h1 Submitted Videos
 
-	for video in submissions
-		ul.list-unstyled
-			li 
-				iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+	div.ferris-wheel
+		.cart
+			for video in submissions1
+				.vid
+					iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+		.cart
+			for video in submissions2
+				.vid
+					iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+					button.voteBtn vote
+
+		//- if submissions.length === 8
+		//- 	div.cart.cart1.visible
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[0].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[1].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		button.next Next
+		//- 	div.cart.cart2
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[2].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[3].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		button.next Next
+		//- 	div.cart.cart3
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[4].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[5].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		button.next Next
+		//- 	div.cart.cart4
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[6].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		div.vid
+		//- 			iframe(width="560" height="315" src=submissions[7].url frameborder="0" allowfullscreen)
+		//- 			button.voteBtn vote
+		//- 		button.next Next
+		//- else
+		//- 	h1 We still need more submissions before voting can begin
+	//- ul.list-unstyled.left-list
+	//- 	for video in submissions
+	//- 		if submissions.length <= 4
+	//- 			li 
+	//- 				iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+	//- 				button vote
+	//- ul.list-unstyled.right-list
+	//- 	for video in submissions
+	//- 		if submissions.length > 4 && submissions.length <= 8
+	//- 			li 
+	//- 				iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)
+	//- 				button vote
+
+	//- else
+	//- 	- alert("The maximum number of submissions has already been reached")
+
+		
+
+	
