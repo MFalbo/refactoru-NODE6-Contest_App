@@ -2,3 +2,8 @@ extends layout
 
 block content
 	h1 Here are the past winners
+
+	ul
+		for video in winners
+			li 
+				iframe(width="560" height="315" src=video.url frameborder="0" allowfullscreen)

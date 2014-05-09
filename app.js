@@ -22,7 +22,7 @@ app.get('/submit', function(req, res) {
 });
 
 app.post('/formsubmit', function(req, res){
-	if(submissions1.length > 4){
+	if(submissions1.length === 4){
 		submissions2.push(req.body);
 	}
 	else{
